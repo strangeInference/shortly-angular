@@ -3,14 +3,14 @@ var Link = require('./linkModel.js');
     util = require('../config/utils.js');
 
 
-var findLink = Q.denodeify(Link.findOne, Link);
-var createLink = Q.denodeify(Link.create, Link);
-var findAllLinks = Q.denodeify(Link.find, Link);
+var findLink = Q.nbind(Link.findOne, Link);
+var createLink = Q.nbind(Link.create, Link);
+var findAllLinks = Q.nbind(Link.find, Link);
 
 module.exports = {
 
   allLinks: function (req, res, next) {
-  findAllLink({})
+  findAllLinks({})
     .then(function (links) {
       res.json(links);
     })
