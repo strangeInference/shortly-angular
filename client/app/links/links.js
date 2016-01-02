@@ -4,6 +4,7 @@ angular.module('shortly.links', [])
   // Your code here
   $scope.data = {};
   Links.getAll().then(function (links) {
+    console.log(links);
     $scope.data.links = links;
   });
 });

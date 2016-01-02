@@ -1,6 +1,20 @@
-<div id='container'>
+<div id='container' ng-controller="ShortenController">
 <!-- Your code here -->
-<h1>TEST</h1>
+  <div class='navigation'>
+  <ul>
+    <li><a href='#links' class='index'>All Links</a></li>
+    <li><a href='#shorten' class='create'>Shorten</a></li>
+    <li><a href='/logout' class='logout'>Logout</a></li>
+  </ul>
+  </div>
+  <form ng-submit="submit()">
+      <input class='text' type='text' ng-model="text" name='url'>
+      <input type='submit' value='Shorten'>
+  </form>
+  <!--<img class='spinner' src='../../assets/spiffygif_46x46.gif'>-->
+  <div class='message'>
+    {{link}}
+  </div>
 </div>
 
 

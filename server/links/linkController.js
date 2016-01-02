@@ -10,6 +10,7 @@ var findAllLinks = Q.nbind(Link.find, Link);
 module.exports = {
 
   allLinks: function (req, res, next) {
+  console.log("allLinks called");
   findAllLinks({})
     .then(function (links) {
       res.json(links);
@@ -20,6 +21,7 @@ module.exports = {
   },
 
   newLink: function (req, res, next) {
+    console.log("\n\n\n !!!!!!!!!!!!!!newLink called\n\n\n\n");
     var url = req.body.url;
     if (!util.isValidUrl(url)) {
       return next(new Error('Not a valid url'));

@@ -1,4 +1,13 @@
-<div id='container'>
+<div id='container' ng-controller="LinksController">
   <!-- Your html here -->
-  <h1>Test</h1>
+  <div class='navigation'>
+  <ul>
+    <li><a href='#links' class='index'>All Links</a></li>
+    <li><a href='#shorten' class='create'>Shorten</a></li>
+    <li><a href='/logout' class='logout'>Logout</a></li>
+  </ul>
+  </div>
+  <div ng-repeat='link in data.links'>
+   {{link.url}}
+  </div>
 </div>
