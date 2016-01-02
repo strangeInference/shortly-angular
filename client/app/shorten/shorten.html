@@ -12,8 +12,16 @@
       <input type='submit' value='Shorten'>
   </form>
   <!--<img class='spinner' src='../../assets/spiffygif_46x46.gif'>-->
-  <div class='message'>
-    {{link}}
+  <div ng-hide="mybool" class='message'>
+  <div class="link">
+      <img src='../../assets/redirect_icon.png'/>
+      <div class='info'>
+        <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
+        <div class='title'>{{link.title}}</div>
+        <div class='original'>{{link.url}}</div>
+        <a href='{{link.base_url}}/{{link.code}}'>{{link.base_url}}/{{link.code}}</a>
+      </div>
+    <div>
   </div>
 </div>
 
