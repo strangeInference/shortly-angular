@@ -7,13 +7,13 @@ angular.module('shortly.shorten', [])
   $scope.addLink = function (link) {
     console.log(link);
     Links.addOne(link)
-    .then(function(data){
+    .then(function (data) {
       $scope.link = data;
     });
   };
   $scope.submit = function () {
     if ($scope.text) {
-      $scope.addLink(this.text); 
+      $scope.addLink(this.text);
       $scope.mybool = false;
     }
   };
