@@ -12,9 +12,10 @@ angular.module('shortly.shorten', [])
     });
   };
   $scope.submit = function () {
-    if ($scope.text) {
-      $scope.addLink(this.text);
+    if ($scope.url) {
+      $scope.addLink($scope.url);
       $scope.mybool = false;
+      $scope.url = '';
     }
   };
 });
